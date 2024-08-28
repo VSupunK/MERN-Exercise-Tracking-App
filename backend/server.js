@@ -11,6 +11,9 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 //middleware
+console.log(cors); // Should log the cors function
+console.log(express.json); // Should log the json function
+
 app.use(cors());
 app.use(express.json());
 
@@ -24,7 +27,7 @@ connection.once('open', () => {
 
 //requiring and use the files
 const exercisesRouter = require('./routes/exercises');
-const userSchemaRouter = require('./routes/user');
+const usersRouter = require('./routes/users');
 
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);

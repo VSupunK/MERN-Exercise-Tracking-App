@@ -7,6 +7,7 @@ router.route('/').get((req,res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+//handle incoming http post request
 router.route('/add').post((req,res)=> {
     const username = req.body.username;
 
@@ -17,4 +18,4 @@ router.route('/add').post((req,res)=> {
     .catch(err => res.status(400).json('Error: '+ err));
 });
 
-module.export = router;
+module.exports = router;
