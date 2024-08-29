@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 export default class Navbar extends Component {
     render() {
         return (
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <Link to='/' className="navbar-brand"> ExcerTracker</Link>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <Link to='/' className="navbar-brand">ExcerTracker</Link>
 
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <Link to='/' className="nav-link">Exercices</Link>
+                <div className="collapse navbar-collapse">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item">
+                            <Link to='/' className="nav-link">Exercises</Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link to='/create' className="nav-link">Create Exercise Log</Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link to='/user' className="nav-link">Create User</Link>
                         </li>
                     </ul>
@@ -23,5 +23,4 @@ export default class Navbar extends Component {
             </nav>
         );
     }
-
 }
