@@ -5,6 +5,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="container">
                 <Link to='/' className="navbar-brand">ExcerTracker</Link>
 
                 <div className="collapse navbar-collapse">
@@ -20,6 +21,7 @@ export default class Navbar extends Component {
                         </li>
                     </ul>
                 </div>
+                </nav>
             </nav>
         );
     }
