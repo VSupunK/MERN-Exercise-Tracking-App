@@ -67,6 +67,11 @@ export default class CreateExercise extends Component {
         window.location = '/';
     }
 
+    renderUsersOptions() {
+        return this.state.users.map(user => (
+            <option key={user} value={user}>{user}</option>
+        ));
+    }
 
     render() {
         return (
@@ -110,18 +115,18 @@ export default class CreateExercise extends Component {
                         />
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group mb-3">
                         <label>Date: </label>
                         <div>
                             <DatePicker
-                                selected={this.date}
+                                selected={this.state.date}
                                 onChange={this.onChangeDate}
                             />
                         </div>
                     </div>
 
                     <div className="form-group">
-                        <input type="submit" value="Create Exerrcise Log" className="btn btn-primary" />
+                        <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
                     </div>
                 </form>
             </div>

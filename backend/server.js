@@ -19,7 +19,7 @@ app.use(express.json());
 
 //connecting database URL
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uri); //{ useNewUrlParser: true, useUnifiedTopology: true }
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log("MongoDB database connection established successfully!");
