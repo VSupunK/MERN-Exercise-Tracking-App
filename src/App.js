@@ -11,6 +11,8 @@ import CreateUser from "./components/create-user.component";
 
 function App() {
   return (
+    <div className='bg-secondary  min-vh-100'>
+
     <Router>
       <Navbar />
       <br />
@@ -21,6 +23,7 @@ function App() {
         <Route path='/user' element={<CreateUser />} />
       </Routes>
     </Router>
+    </div>
   );
 }
 
